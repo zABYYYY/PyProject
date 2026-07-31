@@ -25,6 +25,9 @@ class MainWin(QWidget):
 
     def connects(self):
         self.btn_next.clicked.connect(self.next_click)
+    def next_click(self):
+        self.hide()
+        self.tw = TestWin()
 
     ''' встановлює, як виглядатиме вікно (напис, розмір, місце) '''
     def set_appear(self):
