@@ -17,3 +17,8 @@ class FinalWin(QWidget):
         layout.addWidget(label)
 
         self.setLayout(layout)
+        
+app = QApplication([])
+fw = FinalWin()
+fw.show()
+app.exec_()
