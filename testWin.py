@@ -1,10 +1,9 @@
+
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import (QApplication, QWidget, QHBoxLayout, QVBoxLayout,
 QPushButton, QLabel, QLineEdit)
 
-from mainWin import MainWin
-
-testWin.setWindowTitle("Здоров'я")
+from instr import *
 
 win_x, win_y = 200, 100
 win_width, win_height = 1000, 600
@@ -22,9 +21,9 @@ class testWin(QWidget):
         self.show()
 
     def initUI(self):
-        
+        self.txt_hello = QLabel(txt_hello)
         self.layout_line = QVBoxLayout()
-        self.layout_line.addWidget(self.hello_text, alignment=Qt.AlignCenter)
+        self.layout_line.addWidget(self.txt_hello, alignment=Qt.AlignCenter)
         self.layout_line.addWidget(self.btn_next, alignment=Qt.AlignCenter)
         self.setLayout(self.layout_line)
 
@@ -41,50 +40,9 @@ class testWin(QWidget):
         self.move(win_x, win_y)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 app = QApplication([])
-main_win = MainWin()
-main_win.show()
+test_Win = testWin()
+test_Win.show()
 app.exec_()
+
+
